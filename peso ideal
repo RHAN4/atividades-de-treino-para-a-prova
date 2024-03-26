@@ -1,0 +1,40 @@
+#include <string.h>
+#include <limits.h>
+#include <locale.h>
+#include <ctype.h>
+
+//Elabore um algoritmo que leia
+//o peso e a altura de um adulto
+//e mostre sua condição de
+//acordo com a tabela ao lado.
+
+void cabecalho () {
+  system("clls || clear");
+  printf("== SENAI ==\n");
+  fflush(stdin);
+}
+
+int main() {
+cabecalho();
+setlocale(LC_ALL, "");
+  float peso, altura, pesoIdeal;
+  char genero [50];
+  char M, F;
+
+  printf("Digite o seu peso: ");
+  scanf("%f",&peso);
+  printf("Digite a sua altura: ");
+  scanf("%f",&altura);
+  printf("Digite o seu gênero (F) para Feminino e (M) para Masculino: ");
+  scanf("%s",genero);
+
+  if (strcmp(genero, "F") == 0) {
+    pesoIdeal = (62.1 * altura);
+  } if (strcmp(genero, "M") == 0) {
+    pesoIdeal = (72.7 * altura);
+  } 
+
+  printf("O seu peso ideal é: %.2f", pesoIdeal);
+  
+    return 0;
+}
