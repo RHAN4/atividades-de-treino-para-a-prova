@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <limits.h>
+#include <locale.h>
+#include <ctype.h>
+
+void cabecalho () {
+  system("clls || clear");
+  printf("== SENAI ==\n");
+  fflush(stdin);
+}
+
+int main() {
+cabecalho();
+setlocale(LC_ALL, "");
+  int i = 1;
+
+
+  while (i <= 100) {
+    if (i % 2 == 0)
+printf("%i ", i);
+i++;
+  }
+    return 0;
+}
