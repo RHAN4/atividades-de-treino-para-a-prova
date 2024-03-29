@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <limits.h>
+#include <locale.h>
+#include <ctype.h>
+
+void cabecalho () {
+  system("clls || clear");
+  printf("== SENAI ==\n");
+  fflush(stdin);
+}
+
+int main() {
+cabecalho();
+setlocale(LC_ALL, "");
+  float nota, soma = 0.0, media;
+  int numeroAluno, i = 1;
+
+  printf("Digite a quantidade de alunos em sua sala: ");
+  scanf("%i",&numeroAluno);
+
+  while (i <= numeroAluno) {
+  printf("Digite as notas de cada aluno: ");
+  scanf("%f",&nota);
+
+  soma += nota;
+
+  i++;
+  }
+
+  media = soma / numeroAluno;
+  
+  printf("Média geral: %.2f", media);
+    return 0;
+}
