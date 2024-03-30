@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <limits.h>
+#include <locale.h>
+#include <ctype.h>
+
+//Escreva um algoritmo que leia a nota de um aluno. 
+//Caso seja menor que 0 ou maior que 10, //mostre a pergunta novamente.
+//Mostre a nota informada pelo usuário.
+
+void cabecalho () {
+  system("clls || clear");
+  printf("== SENAI ==\n");
+  fflush(stdin);
+}
+
+int main() {
+cabecalho();
+setlocale(LC_ALL, "");
+  float nota1, nota2, media;
+
+  do {
+    printf("Digite a sua primeira nota: ");
+    scanf("%f",&nota1);
+    printf("Digite a sua segunda nota: ");
+    scanf("%f",&nota2);
+ 
+  } while (nota1 <= 0 || nota1 >= 10 || nota2 <= 0 || nota2 >= 10);
+
+  media = (nota1 + nota2) / 2;
+
+  printf("\nPrimeira nota: %.2f", nota1);
+  printf("\nSegunda nota: %.2f", nota2);
+  printf("\nMédia: %.2f", media);
+  
+    return 0;
+}
