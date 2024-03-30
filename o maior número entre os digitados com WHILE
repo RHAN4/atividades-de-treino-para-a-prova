@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <limits.h>
+#include <locale.h>
+#include <ctype.h>
+
+void cabecalho () {
+  system("clls || clear");
+  printf("== SENAI ==\n");
+  fflush(stdin);
+}
+
+int main() {
+cabecalho();
+setlocale(LC_ALL, "");
+  int numero, maior = 0, i = 1;
+
+  while (i <= 10) {
+    printf("Digite o número: ");
+    scanf("%i",&numero);
+
+  if (numero > maior)
+     maior = numero;
+
+    i++;
+  }
+
+  printf("O maior número é: %i", maior);
+
+    return 0;
+}
