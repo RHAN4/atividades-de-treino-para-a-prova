@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <limits.h>
+#include <locale.h>
+#include <ctype.h>
+
+void cabecalho () {
+  system("clls || clear");
+  printf("== SENAI ==\n");
+  fflush(stdin);
+}
+
+int main() {
+  cabecalho();
+  int i;
+
+  for (i = 1; i <= 20; i++) {
+    if (i % 2 == 1) {
+      printf("%i\n", i);
+    }
+  }
+  return 0;
+}
