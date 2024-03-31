@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <limits.h>
+#include <locale.h>
+#include <ctype.h>
+
+void cabecalho () {
+  system("clls || clear");
+  printf("== SENAI ==\n");
+  fflush(stdin);
+}
+
+int main() {
+  cabecalho();
+  int i, numero, pares = 0, impares = 0;
+
+  for(i = 1; i <= 5; i++) {
+  printf("Digite o %iº número: ", i);
+  scanf("%i",&numero);
+
+  if (numero % 2 == 0) {
+    pares++;
+  } else {
+    impares++;
+  }
+ }
+
+  printf("\nQuantidade de pares: %d", pares);
+  printf("\nQuantidade de impares: %d", impares);
+
+  return 0;
+}
