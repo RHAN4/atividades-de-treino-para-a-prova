@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <limits.h>
+#include <locale.h>
+#include <ctype.h>
+
+void cabecalho () {
+  system("clls || clear");
+  printf("== SENAI ==\n");
+  fflush(stdin);
+}
+
+int main() {
+  cabecalho();
+  int i, numero;
+
+  printf("Digite o número: ");
+  scanf("%i",&numero);
+
+  printf("A tabuada de %d é: \n", numero);
+
+  for (i = 1; i <= 10; i++) {
+    printf("%i x %i = %i\n", numero, i, numero * i);
+  }
+  return 0;
+}
